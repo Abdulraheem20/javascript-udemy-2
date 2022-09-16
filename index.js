@@ -81,7 +81,7 @@ function fruitProcessor(apples, oranges){
 }
 console.log(fruitProcessor(2, 3));
 */
-
+/*
 const calcAge2 = function (birthYear){
     return 2040 - birthYear;  
 };
@@ -104,6 +104,7 @@ const yearsUntilRetirement2 = function(birthYear, firstname) {
 console.log(yearsUntilRetirement2(1990, 'Abdulraheem'));
 console.log(yearsUntilRetirement2(1960, 'Taiwo'));
 
+*/
 
 
 
@@ -169,6 +170,42 @@ friends.push(23);
 console.log(friends.includes('Steven'));
 console.log(friends.includes('Bob'));
 console.log(friends.includes(23));
-console.log(friends.includes('23'));*/
+console.log(friends.includes('23'));
+*/
 
 
+const bio = {
+    fName: 'Abdulraheem',
+    lName: 'Raimi',
+    age: 2022 - 1994,
+    job: 'Engineer',
+    friends: ['Abd Rozaq', 'Ibrahim', 'Ridwan']
+}
+console.log(bio);
+
+// retrieving data from object//
+// Dot vs square bracket//
+
+console.log(bio.lName);
+console.log(bio['lName']);
+
+const nameKey = 'Name';
+console.log(bio['f' + nameKey]);
+console.log(bio['l' + nameKey]);
+
+const infoOfInterest = prompt(`What do you want to know about his bio? Choose between fName, lName, age, job and friends.`);
+
+//console.log(bio.infoOfInterest); // only bracket notation can be used. 
+
+if (bio[infoOfInterest]){
+    console.log(bio[infoOfInterest]);
+} else{
+    console.log('Wrong request! Choose between fName, lName, age, job and friends.')
+};
+
+bio.location = 'Nigeria';
+bio['religion'] = 'Islam';
+console.log(bio);
+
+// challenge
+console.log(`${bio.fName} has ${bio.friends.length} friends, and his best friend is called ${bio.friends[0]}.`)
